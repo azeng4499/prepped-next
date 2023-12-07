@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.lato {
+  font-family: "Lato", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.kanit {
+  font-family: "Kanit", sans-serif;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.merriweather {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Custom nth-child styles for alternating colors */
+.nth-child-odd\:bg-custom-black:nth-child(odd) {
+  background-color: #000; /* Black */
+}
+
+.nth-child-even\:bg-custom-red:nth-child(even) {
+  background-color: #18181b; /* Red */
+}
+
+.dancing {
+  font-family: "Dancing Script", "Helvetica Neue", cursive;
 }
