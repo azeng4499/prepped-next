@@ -30,7 +30,3 @@
 .nth-child-even\:bg-custom-red:nth-child(even) {
   background-color: #18181b; /* Red */
 }
-
-.dancing {
-  font-family: "Dancing Script", "Helvetica Neue", cursive;
-}

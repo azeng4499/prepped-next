@@ -149,7 +149,7 @@ const ReviewComponent = ({
                   Strengths
                 </div>
                 <div
-                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1.15rem]"
+                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1rem]"
                   style={{
                     height: "calc(100% - 60px)",
                   }}
@@ -180,7 +180,7 @@ const ReviewComponent = ({
                   Areas of Improvement
                 </div>
                 <div
-                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1.15rem]"
+                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1rem]"
                   style={{
                     height: "calc(100% - 60px)",
                   }}

@@ -100,6 +100,12 @@ const HomeComponent = () => {
       totalAmount: "$300.00",
       paymentMethod: "Credit Card",
     },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
   ];
 
   return (
@@ -181,23 +187,25 @@ const HomeComponent = () => {
       <div class="w-full flex" style={{ height: "calc(100vh * 9/10)" }}>
         <div class="w-5/6 h-full pt-5px pr-5px pl-10px pb-10px">
           <div class="w-full h-full rounded-md p-10px overflow-scroll bg-black">
-            <div className="w-full">
-              <div className="flex items-center py-4">
-                <Input
-                  placeholder="Filter questions..."
-                  // value={table.getColumn("email")?.getFilterValue() ?? ""}
-                  // onChange={(event) =>
-                  //   table.getColumn("email")?.setFilterValue(event.target.value)
-                  // }
-                  className="max-w-sm text-white"
-                />
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="ml-auto text-white">
-                      Catagories <ChevronDownIcon className="ml-2 h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  {/* <DropdownMenuContent align="end">
+            <div
+              className="flex items-center py-4"
+              style={{ height: "calc(100% * 1/10)" }}
+            >
+              <Input
+                placeholder="Filter questions..."
+                // value={table.getColumn("email")?.getFilterValue() ?? ""}
+                // onChange={(event) =>
+                //   table.getColumn("email")?.setFilterValue(event.target.value)
+                // }
+                className="max-w-sm text-white"
+              />
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="ml-auto text-white">
+                    Catagories <ChevronDownIcon className="ml-2 h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                {/* <DropdownMenuContent align="end">
                     {table
                       .getAllColumns()
                       .filter((column) => column.getCanHide())
@@ -216,66 +224,65 @@ const HomeComponent = () => {
                         );
                       })}
                   </DropdownMenuContent> */}
-                </DropdownMenu>
-              </div>
-              <div className="rounded-md">
-                <Table className="text-white">
-                  <TableHeader>
-                    <TableRow className="hover:bg-black">
-                      <TableHead className="w-[100px]">Invoice</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead>Method</TableHead>
-                      <TableHead className="text-right">Amount</TableHead>
+              </DropdownMenu>
+            </div>
+            <div
+              class="rounded-md overflow-scroll"
+              style={{ height: "calc(100% * 8/10)" }}
+            >
+              <Table className="text-white">
+                <TableHeader>
+                  <TableRow className="hover:bg-black">
+                    <TableHead className="w-[100px]">Invoice</TableHead>
+                    <TableHead>Status</TableHead>
+                    <TableHead>Method</TableHead>
+                    <TableHead className="text-right">Amount</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {invoices.map((invoice) => (
+                    <TableRow
+                      key={invoice.invoice}
+                      className="border-none nth-child-odd:bg-custom-black nth-child-even:bg-custom-red select-none hover:bg-purple-500"
+                    >
+                      <TableCell className="font-medium">
+                        {invoice.invoice}
+                      </TableCell>
+                      <TableCell>{invoice.paymentStatus}</TableCell>
+                      <TableCell>{invoice.paymentMethod}</TableCell>
+                      <TableCell className="text-right">
+                        {invoice.totalAmount}
+                      </TableCell>
                     </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {invoices.map((invoice) => (
-                      <TableRow
-                        key={invoice.invoice}
-                        className="border-none nth-child-odd:bg-custom-black nth-child-even:bg-custom-red select-none hover:bg-purple-500"
-                      >
-                        <TableCell className="font-medium">
-                          {invoice.invoice}
-                        </TableCell>
-                        <TableCell>{invoice.paymentStatus}</TableCell>
-                        <TableCell>{invoice.paymentMethod}</TableCell>
-                        <TableCell className="text-right">
-                          {invoice.totalAmount}
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                  {/* <TableFooter>
-                    <TableRow>
-                      <TableCell colSpan={3}>Total</TableCell>
-                      <TableCell className="text-right">$2,500.00</TableCell>
-                    </TableRow>
-                  </TableFooter> */}
-                </Table>
-              </div>
-              <div className="flex items-center justify-end space-x-2 py-4">
-                <div className="flex-1 text-sm text-muted-foreground">
-                  {/* {table.getFilteredSelectedRowModel().rows.length} of{" "}
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+            <div
+              className="flex items-center justify-end space-x-2 py-4"
+              style={{ height: "calc(100% * 1/10)" }}
+            >
+              <div className="flex-1 text-sm text-muted-foreground">
+                {/* {table.getFilteredSelectedRowModel().rows.length} of{" "}
                   {table.getFilteredRowModel().rows.length} row(s) selected. */}
-                </div>
-                <div className="space-x-2 text-white">
-                  <Button
-                    variant="outline"
+              </div>
+              <div className="space-x-2 text-white">
+                <Button
+                  variant="outline"
 
-                    // onClick={() => table.previousPage()}
-                    // disabled={!table.getCanPreviousPage()}
-                  >
-                    Previous
-                  </Button>
-                  <Button
-                    variant="outline"
+                  // onClick={() => table.previousPage()}
+                  // disabled={!table.getCanPreviousPage()}
+                >
+                  Previous
+                </Button>
+                <Button
+                  variant="outline"
 
-                    // onClick={() => table.nextPage()}
-                    // disabled={!table.getCanNextPage()}
-                  >
-                    Next
-                  </Button>
-                </div>
+                  // onClick={() => table.nextPage()}
+                  // disabled={!table.getCanNextPage()}
+                >
+                  Next
+                </Button>
               </div>
             </div>
           </div>
@@ -306,7 +313,7 @@ const HomeComponent = () => {
                     value={36}
                     styles={{
                       path: {
-                        stroke: "#9c3cf6",
+                        stroke: "#F75755",
                       },
                     }}
                   >
@@ -336,7 +343,7 @@ const HomeComponent = () => {
                     value={78}
                     styles={{
                       path: {
-                        stroke: "#a855f7",
+                        stroke: "#F755F5",
                       },
                     }}
                   >
@@ -366,7 +373,7 @@ const HomeComponent = () => {
                     value={66}
                     styles={{
                       path: {
-                        stroke: "#c48af9",
+                        stroke: "#5755F7",
                       },
                     }}
                   >
