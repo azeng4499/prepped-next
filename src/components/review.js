@@ -48,10 +48,10 @@ const ReviewComponent = ({
                     <CgTranscript class="h-20px w-20px" />
                     View Transcript
                   </div>
-                  {/* <div class="flex justify-center items-center gap-10px">
-                    <AiOutlineNumber class="h-20px w-20px" />
+                  <div class="flex justify-center items-center gap-10px">
+                    <IoIosSave class="h-20px w-20px" />
                     Attempt 4
-                  </div> */}
+                  </div>
                   <div class="flex justify-center items-center gap-10px">
                     <IoIosSave class="h-20px w-20px" />
                     Save Response
@@ -149,7 +149,7 @@ const ReviewComponent = ({
                   Strengths
                 </div>
                 <div
-                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1rem]"
+                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1.15rem]"
                   style={{
                     height: "calc(100% - 60px)",
                   }}
@@ -180,7 +180,7 @@ const ReviewComponent = ({
                   Areas of Improvement
                 </div>
                 <div
-                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1rem]"
+                  class="no-scrollbar w-full flex flex-col gap-15px roboto overflow-scroll text-[1.15rem]"
                   style={{
                     height: "calc(100% - 60px)",
                   }}

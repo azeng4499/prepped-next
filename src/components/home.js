@@ -106,6 +106,60 @@ const HomeComponent = () => {
       totalAmount: "$300.00",
       paymentMethod: "Credit Card",
     },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
+    {
+      invoice: "INV007",
+      paymentStatus: "Unpaid",
+      totalAmount: "$300.00",
+      paymentMethod: "Credit Card",
+    },
   ];
 
   return (
@@ -186,10 +240,10 @@ const HomeComponent = () => {
       </div>
       <div class="w-full flex" style={{ height: "calc(100vh * 9/10)" }}>
         <div class="w-5/6 h-full pt-5px pr-5px pl-10px pb-10px">
-          <div class="w-full h-full rounded-md p-10px overflow-scroll bg-black">
+          <div class="w-full h-full rounded-md p-10px overflow-scroll bg-black no-scrollbar">
             <div
-              className="flex items-center py-4"
-              style={{ height: "calc(100% * 1/10)" }}
+              className="flex items-center pl-10px pr-10px"
+              style={{ height: "calc(100% * 2/20)" }}
             >
               <Input
                 placeholder="Filter questions..."
@@ -227,8 +281,8 @@ const HomeComponent = () => {
               </DropdownMenu>
             </div>
             <div
-              class="rounded-md overflow-scroll"
-              style={{ height: "calc(100% * 8/10)" }}
+              class="rounded-md overflow-scroll no-scrollbar pl-10px pr-10px"
+              style={{ height: "calc(100% * 17/20)" }}
             >
               <Table className="text-white">
                 <TableHeader>
@@ -258,36 +312,12 @@ const HomeComponent = () => {
                 </TableBody>
               </Table>
             </div>
-            <div
-              className="flex items-center justify-end space-x-2 py-4"
-              style={{ height: "calc(100% * 1/10)" }}
-            >
-              <div className="flex-1 text-sm text-muted-foreground">
-                {/* {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                  {table.getFilteredRowModel().rows.length} row(s) selected. */}
-              </div>
-              <div className="space-x-2 text-white">
-                <Button
-                  variant="outline"
-
-                  // onClick={() => table.previousPage()}
-                  // disabled={!table.getCanPreviousPage()}
-                >
-                  Previous
-                </Button>
-                <Button
-                  variant="outline"
-
-                  // onClick={() => table.nextPage()}
-                  // disabled={!table.getCanNextPage()}
-                >
-                  Next
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
-        <div class="w-1/6 h-full pt-5px pr-10px pl-5px pb-10px">
+        <div
+          class="w-1/6 h-full pt-5px pr-10px pl-5px pb-10px"
+          // style={{ maxWidth: "350px", minWidth: "350px" }}
+        >
           <div class="w-full h-full bg-black rounded-md flex flex-col justify-start items-center gap-10px">
             <div
               class="text-white flex justify-center items-center pt-20px pb-10px font-bold"
@@ -302,7 +332,7 @@ const HomeComponent = () => {
               <div class="h-content w-full h-1/3 flex justify-center items-center flex-col gap-20px">
                 <div
                   style={{
-                    width: "calc(100% * 8/10)",
+                    width: "calc(100% * 15/20)",
                     height: "auto",
                     border: "solid white 2px",
                     padding: "10px",
@@ -324,7 +354,7 @@ const HomeComponent = () => {
                       }}
                     >
                       <div>36/100</div>
-                      <div class="text-[0.6rem]">Behavioral</div>
+                      <div class="text-[0.6em]">Behavioral</div>
                     </div>
                   </CircularProgressbarWithChildren>
                 </div>
@@ -332,7 +362,7 @@ const HomeComponent = () => {
               <div class="h-content w-full h-1/3 flex justify-center items-center flex-col gap-20px">
                 <div
                   style={{
-                    width: "calc(100% * 8/10)",
+                    width: "calc(100% * 15/20)",
                     height: "auto",
                     border: "solid white 2px",
                     padding: "10px",
@@ -354,7 +384,7 @@ const HomeComponent = () => {
                       }}
                     >
                       <div>78/100</div>
-                      <div class="text-[0.6rem]">Company-specific</div>
+                      <div class="text-[0.6em]">Company-specific</div>
                     </div>
                   </CircularProgressbarWithChildren>
                 </div>
@@ -362,7 +392,7 @@ const HomeComponent = () => {
               <div class="h-content w-full h-1/3 flex justify-center items-center flex-col gap-20px">
                 <div
                   style={{
-                    width: "calc(100% * 8/10)",
+                    width: "calc(100% * 15/20)",
                     height: "auto",
                     border: "solid white 2px",
                     padding: "10px",
@@ -384,7 +414,7 @@ const HomeComponent = () => {
                       }}
                     >
                       <div>66/100</div>
-                      <div class="text-[0.6rem]">Job-specific</div>
+                      <div class="text-[0.6em]">Job-specific</div>
                     </div>
                   </CircularProgressbarWithChildren>
                 </div>
