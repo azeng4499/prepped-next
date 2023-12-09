@@ -36,6 +36,7 @@ const RecordComponent = ({
   useEffect(() => {
     if (time <= 0) {
       pause();
+      handleStopCaptureClick();
     }
     const minutes = Math.floor(time / 60);
     setMinuteDisplay(minutes);

@@ -2,24 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.lato {
-  font-family: "Lato", sans-serif;
-}
-
-.kanit {
-  font-family: "Kanit", sans-serif;
-}
-
-.merriweather {
-  font-family: "Merriweather Sans", sans-serif;
+body {
+  background-color: #18181b;
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-.roboto {
-  font-family: "Roboto", sans-serif;
 }
 
 /* Custom nth-child styles for alternating colors */
@@ -29,4 +17,116 @@
 
 .nth-child-even\:bg-custom-red:nth-child(even) {
   background-color: #18181b; /* Red */
+}
+
+.large-screen {
+  display: none;
+}
+
+.home-table-height-container {
+  height: calc(100vh * 33 / 40);
+}
+
+.home-table-width-container {
+  width: 100vw;
+  padding-right: 10px;
+  padding-top: 0px;
+}
+
+.home-table-container {
+  border-radius: 0 0 0.375rem 0.375rem;
+}
+
+.nav-menu-mobile-text-size {
+  font-size: 0.8rem;
+}
+
+.home-table-toolbar {
+  display: none;
+}
+
+.small-screen {
+  display: flex;
+}
+
+.medium-screen {
+  display: none;
+}
+
+.home-table-toolbar-container {
+  /* height: calc(100% * 2 / 20);
+  justify-content: end; */
+  display: none;
+}
+
+.home-table-mobile-container {
+  height: calc(100% * 19 / 20);
+}
+
+@media (min-width: 640px) {
+  .large-screen {
+    display: none;
+  }
+  .medium-screen {
+    display: none;
+  }
+  .small-screen {
+    display: flex;
+  }
+  .nav-menu-mobile-text-size {
+    font-size: 1rem;
+  }
+  .home-table-toolbar {
+    display: flex;
+  }
+  .home-table-toolbar-container {
+    height: calc(100% * 2 / 20);
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .home-table-mobile-container {
+    height: calc(100% * 17 / 20);
+  }
+}
+
+@media (min-width: 768px) {
+  .large-screen {
+    display: none;
+  }
+  .medium-screen {
+    display: flex;
+  }
+  .small-screen {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .large-screen {
+    display: flex;
+  }
+  .medium-screen {
+    display: none;
+  }
+  .small-screen {
+    display: none;
+  }
+  .home-table-width-container {
+    width: calc(100% * 5 / 6);
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .home-table-height-container {
+    height: calc(100vh * 9 / 10);
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .home-table-container {
+    border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
+  }
 }

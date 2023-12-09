@@ -31,8 +31,11 @@ const ReviewComponent = ({
       <div class="w-screen h-screen flex justify-center items-center flex lato flex-col">
         <div class="flex w-full h-full bg-zinc-900">
           <div class="h-screen w-2/3">
-            <div class="h-1/6 w-full pt-10px pr-5px pb-5px pl-10px">
-              <div class="no-scrollbar h-full w-full bg-black rounded-md text-white overflow-scroll flex flex-col justify-center items-center gap-20px pr-20px pl-20px">
+            <div
+              class="w-full pt-10px pr-5px pb-5px pl-10px"
+              style={{ height: "fit-content" }}
+            >
+              <div class="no-scrollbar w-full rounded-md text-white overflow-scroll flex flex-col justify-center items-center gap-20px pr-20px pl-20px h-content pt-20px pb-10px bg-black">
                 <div class="text-[1.5rem] w-full text-center">
                   <div>{question}</div>
                 </div>
@@ -68,7 +71,7 @@ const ReviewComponent = ({
                 />
               </div>
             </div>
-            <div class="h-1/6 pt-5px pr-5px pb-10px pl-10px">
+            {/* <div class="h-1/6 pt-5px pr-5px pb-10px pl-10px">
               <div class="h-full bg-black rounded-md flex justify-center align-center p-10px w-content">
                 <amp-ad
                   width="100vw"
@@ -82,7 +85,7 @@ const ReviewComponent = ({
                   <div overflow=""></div>
                 </amp-ad>
               </div>
-            </div>
+            </div> */}
           </div>
           <div class="h-screen w-1/3">
             <div
