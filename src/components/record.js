@@ -86,7 +86,7 @@ const RecordComponent = ({
         webcamDivRef.current.clientHeight
       );
     }
-  }, [webcamDivRef]);
+  }, [webcamDivRef, screenSize]);
 
   const handleStartCaptureClick = useCallback(() => {
     start();
