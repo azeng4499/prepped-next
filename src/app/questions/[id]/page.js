@@ -79,6 +79,17 @@ const page = ({ params }) => {
     handleTranscription();
   }, [recordedVideoChunks]);
 
+  // return (
+  //   <ReviewComponent
+  //     transcription={transcription}
+  //     url={url}
+  //     strengthsPara={strengthsPara}
+  //     improvePara={improvePara}
+  //     rating={rating}
+  //     question={dehash(params.id)}
+  //   />
+  // );
+
   return transcription &&
     url &&
     strengthsPara &&

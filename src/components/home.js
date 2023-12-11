@@ -6,6 +6,7 @@ import { LuUserCircle } from "react-icons/lu";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/shadcn/ui/button";
 import { LuFileEdit } from "react-icons/lu";
+import { Label } from "@/components/shadcn/ui/label";
 
 import {
   DropdownMenu,
@@ -380,22 +381,22 @@ const HomeComponent = () => {
           <div class="h-content pl-10px pb-10px w-5/6 home-table-width-container">
             {/* home-table-width-container*/}
             <div class="w-full h-content rounded-md pl-10px pr-10px pt-20px pb-20px bg-black no-scrollbar home-table-container">
-              <div className="flex items-center pl-10px pr-10px gap-10px home-table-toolbar-container pb-20px">
+              <div className="flex items-center pl-10px pr-10px gap-10px home-table-toolbar-container pb-20px flex-col">
                 <Input
                   placeholder="Filter questions..."
                   // value={table.getColumn("email")?.getFilterValue() ?? ""}
                   // onChange={(event) =>
                   //   table.getColumn("email")?.setFilterValue(event.target.value)
                   // }
-                  className="max-w-sm text-white home-table-toolbar"
+                  className="max-w-sm text-white"
                 />
 
-                <div class="flex justify-center items-center gap-10px home-table-toolbar">
+                <div class="flex justify-center items-center gap-10px home-toolbar-button-div">
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button
                         variant="outline"
-                        className="gap-10px flex justify-center items-center text-white"
+                        className="gap-10px flex justify-center items-center text-white home-toolbar-button"
                       >
                         <LuFileEdit />
                         Edit Roles
@@ -415,7 +416,10 @@ const HomeComponent = () => {
                   </Dialog>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="outline" className="ml-auto text-white">
+                      <Button
+                        variant="outline"
+                        className="ml-auto text-white home-toolbar-button"
+                      >
                         Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
                       </Button>
                     </DropdownMenuTrigger>
@@ -633,7 +637,7 @@ const HomeComponent = () => {
             </div>
           </div>
         </div>
-        <div class="w-full pl-10px pr-10px pb-10px h-content">
+        <div class="w-full pl-10px pr-10px pb-10px h-content home-table-progress-bottom">
           <div class="rounded-md bg-black w-full h-full text-white p-10px">
             <div class="w-full h-1/3 flex justify-center items-center">
               <div class="h-full w-2/3flex justify-center items-center p-5px">
@@ -641,10 +645,13 @@ const HomeComponent = () => {
                   completed={60}
                   width="calc(100vw * 2/3 - 40px)"
                   bgColor="#138808"
+                  id="progress-behavioral"
                 />
               </div>
-              <div class="h-full w-1/3 flex justify-center items-center p-10px text-center font-bold">
-                Behavioral
+              <div class="w-1/3 flex justify-center items-center p-10px">
+                <Label htmlFor="progress-behavioral" className="text-center">
+                  Behavioral
+                </Label>
               </div>
             </div>
             <div class="w-full h-1/3 flex justify-center items-center">
@@ -653,10 +660,13 @@ const HomeComponent = () => {
                   completed={60}
                   width="calc(100vw * 2/3 - 40px)"
                   bgColor="#F755F5"
+                  id="progress-js"
                 />
               </div>
-              <div class="h-full w-1/3 flex justify-center items-center p-10px text-center font-bold">
-                Job-Specific
+              <div class="w-1/3 flex justify-center items-center p-10px">
+                <Label htmlFor="progress-js" className="text-center">
+                  Job-Specific
+                </Label>
               </div>
             </div>
             <div class="w-full h-1/3 flex justify-center items-center">
@@ -665,10 +675,13 @@ const HomeComponent = () => {
                   completed={60}
                   width="calc(100vw * 2/3 - 40px)"
                   bgColor="#5755F7"
+                  id="progress-cs"
                 />
               </div>
-              <div class="h-full w-1/3 flex justify-center items-center p-10px text-center font-bold">
-                Company-Specific
+              <div class="w-1/3 flex justify-center items-center p-10px">
+                <Label htmlFor="progress-cs" className="text-center">
+                  Company-Specific
+                </Label>
               </div>
             </div>
           </div>
