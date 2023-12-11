@@ -23,8 +23,6 @@
     "@tanstack/react-table": "^8.10.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "firebase": "^10.7.1",
-    "firebase-tools": "^13.0.1",
     "next": "14.0.3",
     "react": "^18",
     "react-circular-progressbar": "^2.1.0",
