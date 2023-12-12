@@ -18,7 +18,7 @@ const RecordComponent = ({
 }) => {
   const webcamRef = useRef(null);
   const router = useRouter();
-  const webcamDivRef = useRef(null);
+  // const webcamDivRef = useRef(null);
   const [capturing, setCapturing] = useState(false);
   const videoMediaRecorderRef = useRef(null);
   const audioMediaRecorderRef = useRef(null);
@@ -75,18 +75,18 @@ const RecordComponent = ({
     setSecOnesDisplay(Math.ceil(seconds % 10));
   }, [time, pause]);
 
-  useEffect(() => {
-    if (webcamDivRef.current) {
-      setWebcamDivDim({
-        width: webcamDivRef.current.clientWidth,
-        height: webcamDivRef.current.clientHeight,
-      });
-      console.log(
-        webcamDivRef.current.clientWidth,
-        webcamDivRef.current.clientHeight
-      );
-    }
-  }, [webcamDivRef, screenSize]);
+  // useEffect(() => {
+  //   if (webcamDivRef.current) {
+  //     setWebcamDivDim({
+  //       width: webcamDivRef.current.clientWidth,
+  //       height: webcamDivRef.current.clientHeight,
+  //     });
+  //     console.log(
+  //       webcamDivRef.current.clientWidth,
+  //       webcamDivRef.current.clientHeight
+  //     );
+  //   }
+  // }, [webcamDivRef, screenSize]);
 
   const handleStartCaptureClick = useCallback(() => {
     start();
@@ -234,7 +234,10 @@ const RecordComponent = ({
         <div class="w-full flex" style={{ height: "calc(100vh * 17/20)" }}>
           <div class="h-full pt-5px pb-10px pl-10px record-view-panel">
             <div class="rounded-md w-full h-full overflow-hidden flex justify-center items-center">
-              <div class="w-content h-content flex justify-center overflow-hidden items-center bg-yellow-900">
+              <div
+                class="w-full h-full flex justify-center overflow-hidden items-center"
+                style={{ display: loaded ? "flex" : "none" }}
+              >
                 <Webcam
                   mirrored={true}
                   audio={true}
