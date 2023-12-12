@@ -250,8 +250,16 @@ const RecordComponent = ({
                 style={{
                   objectFit: "cover",
                   display: loaded ? "block" : "none",
-                  height: (screenSize.height * 17) / 20,
-                  aspectRatio: 1.777777778,
+                  height:
+                    screenSize.height < screenSize.width
+                      ? (screenSize.height * 17) / 20
+                      : "auto",
+                  width:
+                    screenSize.height > screenSize.width
+                      ? screenSize.width - 20
+                      : "auto",
+                  aspectRatio:
+                    screenSize.height < screenSize.width ? 1.777777778 : 0.5625,
                   // border: "solid 10px black",
                 }}
                 onUserMedia={() => {
