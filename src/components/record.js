@@ -233,32 +233,32 @@ const RecordComponent = ({
         </div>
         <div class="w-full flex" style={{ height: "calc(100vh * 17/20)" }}>
           <div class="h-full pt-5px pb-10px pl-10px record-view-panel">
-            <div class="rounded-md w-full h-full overflow-hidden flex justify-center items-center">
-              <div
+            <div class="rounded-md w-full h-full overflow-hidden flex justify-center items-center bg-black">
+              {/* <div
                 class="w-full h-full flex justify-center overflow-hidden items-center"
                 style={{ display: loaded ? "flex" : "none" }}
-              >
-                <Webcam
-                  mirrored={true}
-                  audio={true}
-                  ref={webcamRef}
-                  muted={true}
-                  videoConstraints={{
-                    facingMode: "user",
-                    frameRate: 30,
-                  }}
-                  style={{
-                    objectFit: "cover",
-                    display: loaded ? "block" : "none",
-                    height: (screenSize.height * 17) / 20,
-                    aspectRatio: 1.777777778,
-                    border: "solid 10px black",
-                  }}
-                  onUserMedia={() => {
-                    setLoaded(true);
-                  }}
-                />
-              </div>
+              > */}
+              <Webcam
+                mirrored={true}
+                audio={true}
+                ref={webcamRef}
+                muted={true}
+                videoConstraints={{
+                  facingMode: "user",
+                  frameRate: 30,
+                }}
+                style={{
+                  objectFit: "cover",
+                  display: loaded ? "block" : "none",
+                  height: (screenSize.height * 17) / 20,
+                  aspectRatio: 1.777777778,
+                  // border: "solid 10px black",
+                }}
+                onUserMedia={() => {
+                  setLoaded(true);
+                }}
+              />
+              {/* </div> */}
               {!loaded && (
                 <div class="w-full h-full flex justify-center overflow-hidden items-center bg-black">
                   <HashLoader
